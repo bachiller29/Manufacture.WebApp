@@ -3,13 +3,18 @@
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name Produc</label>
-      <input type="text" class="form-control" id="NameProduc" required [(ngModel)]="product.NameProduc" name="NameProduc">
+      <input type="text" class="form-control" id="NameProduc" required [(ngModel)]="product.nameProduc" name="nameProduc">
     </div>
 
     <div class="form-group">
-      <label for="name">State Produc</label>
-      <input type="text" class="form-control" id="StateProduc" required [(ngModel)]="product.StateProduc" name="StateProduc">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="Description" required [(ngModel)]="product.description" name="description">
     </div>    
+
+    <div class="form-group">
+      <label for="name">Price</label>
+      <input type="text" class="form-control" id="Price" required [(ngModel)]="product.price" name="price">
+    </div>   
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>

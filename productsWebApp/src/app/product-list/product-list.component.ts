@@ -22,6 +22,7 @@ export class ProductListComponent implements OnInit {
 
     reloadData() {
       this.products = this.productService.getProductList();
+      debugger
     }
 
     deleteProduct(id: number) {

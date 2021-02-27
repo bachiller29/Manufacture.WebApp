@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>inventory List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Inventory Id</th>
+            <th>Product Id</th>
+            <th>Quantity</th>
+            <th>State Produc</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let inventory of inventorys | async">
+            <td>{{inventory.inventoryId}}</td>
+            <td>{{inventory.productId}}</td>
+            <td>{{inventory.quantity}}</td>
+            <td>{{inventory.stateProduc}}</td>
+            <td><button (click)="deleteInventory(inventory.inventoryId)" class="btn btn-primary">Out</button>
+                <button (click)="inventoryDetails(inventory.inventoryId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
