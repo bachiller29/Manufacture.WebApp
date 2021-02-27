@@ -1,1 +1,31 @@
-<p>inventory-in works!</p>
+<h2>Inventory Details</h2> 
+
+<hr/>
+<form>
+  <div *ngIf="alert">
+    <h4>{{message}}</h4>
+  </div>
+<div *ngIf="inventory">
+  <div>
+    <label><b>Inventory Id: </b></label> {{inventory.inventoryId}}
+  </div>
+  <div>
+    <label><b>Product Id: </b></label> {{inventory.productId}}
+  </div>
+  <div>
+    <label><b>Quantity: </b></label> {{inventory.quantity}}
+  </div>  
+  <div>
+    <label><b>State Produc: </b></label> {{inventory.stateProduc}}
+  </div>
+  <div>
+    <label><b>Quantity to discount: </b></label>
+    <input type="number" class="form-control" id="quantity" required [(ngModel)]="quantity" name="quantity">
+  </div>
+</div>
+<br>
+<button (click)="guardar()" class="btn btn-success">Guardar</button><br>
+</form>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to inventory List</button><br>

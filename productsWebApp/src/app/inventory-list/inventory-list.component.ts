@@ -35,7 +35,20 @@ export class InventoryListComponent implements OnInit {
           error => console.log(error));
     }
 
-    inventoryDetails(InventoryId: number){
-      this.router.navigate(['details', InventoryId]);
+    inventoryOut(InventoryId: number){
+      this.router.navigate(['inventoryOut', InventoryId]);
     }
+
+
+    inventoryIn(InventoryId: number){
+      this.router.navigate(['inventoryIn', InventoryId]);
+    }
+
+    // inventoryOut(InventoryId: number){
+    //   this.router.navigate(['details', InventoryId]);
+    // }
+
+    // inventoryIn(InventoryId: number){
+    //   this.router.navigate(['details', InventoryId]);
+    // }
 }

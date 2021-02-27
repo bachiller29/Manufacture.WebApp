@@ -1,7 +1,9 @@
 <h3>Create Inventory</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">   
-
+    <div *ngIf="alert">
+      <h4>{{message}}</h4>
+    </div>
     <div class="form-group">
       <label for="name">product Id</label>
       <input type="text" class="form-control" id="ProductId" required [(ngModel)]="inventory.productId" name="productId">

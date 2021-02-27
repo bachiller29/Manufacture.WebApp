@@ -2,6 +2,9 @@ import { ProductService } from '../product.service';
 import { Product } from '../product';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InventoryService } from '../inventory.service';
+import { Observable } from 'rxjs';
+import { Inventory } from '../inventory';
 
 @Component({
   selector: 'app-product-create',
@@ -13,10 +16,15 @@ export class ProductCreateComponent implements OnInit {
   product: Product = new Product();
   submitted = false;
 
+ 
+
   constructor(private productService: ProductService,
-    private router: Router) { }
+    private router: Router) { 
+
+    }
 
     ngOnInit() {
+      
     }
 
     newProduct(): void {
@@ -25,6 +33,7 @@ export class ProductCreateComponent implements OnInit {
     }
 
     save() {
+      
       this.productService
       .createProduct(this.product).subscribe(data => {
         console.log(data)
@@ -42,5 +51,7 @@ export class ProductCreateComponent implements OnInit {
     gotoList() {
       this.router.navigate(['/product']);
     }
+
+    
 
 }

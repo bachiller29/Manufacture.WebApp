@@ -24,7 +24,7 @@ import { InventoryOutComponent } from './inventory-out/inventory-out.component';
     InventoryCreateComponent,
     InventoryListComponent,
     InventoryInComponent,
-    InventoryOutComponent
+    InventoryOutComponent,
   ],
   imports: [
     BrowserModule,

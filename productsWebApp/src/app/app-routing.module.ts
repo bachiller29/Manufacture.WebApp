@@ -6,6 +6,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { InventoryCreateComponent } from './inventory-create/inventory-create.component';
 import { InventoryListComponent } from './inventory-list/inventory-list.component';
+import { InventoryInComponent } from './inventory-in/inventory-in.component';
+import { InventoryOutComponent } from './inventory-out/inventory-out.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'details/:id', component: ProductDetailsComponent },
   { path: 'addInventory', component: InventoryCreateComponent },
   { path: 'inventory', component: InventoryListComponent },
+  { path: 'inventoryOut/:id', component: InventoryOutComponent },
+  { path: 'inventoryIn/:id', component: InventoryInComponent },
 ];
 
 @NgModule({

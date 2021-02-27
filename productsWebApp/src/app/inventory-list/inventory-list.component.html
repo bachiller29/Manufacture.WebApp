@@ -19,8 +19,8 @@
             <td>{{inventory.productId}}</td>
             <td>{{inventory.quantity}}</td>
             <td>{{inventory.stateProduc}}</td>
-            <td><button (click)="deleteInventory(inventory.inventoryId)" class="btn btn-primary">Out</button>
-                <button (click)="inventoryDetails(inventory.inventoryId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <td><button (click)="inventoryIn(inventory.inventoryId)" class="btn btn-primary">In</button>
+                <button (click)="inventoryOut(inventory.inventoryId)" class="btn btn-info" style="margin-left: 10px">Out</button>
             </td>
           </tr>
         </tbody>
